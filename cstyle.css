@@ -26,7 +26,11 @@ body {
 #body-header {
     height: 65vh;
     opacity: 1;
-    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg) ;
+    /* background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg) ; */
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -165,13 +169,13 @@ section{
 }
 
 .skills-display{
-    width:70vw;
-    height: 35vh;
+    width:80vw;
+    height: 60%;
     margin: 5px auto; 
     display: flex;
     flex-wrap:wrap;
-    flex-direction: column;
-    justify-content:flex-start;
+    flex-direction: row;
+    justify-content:space-evenly;
     align-items:center;
     
   
@@ -184,14 +188,14 @@ section{
     background-color: lightgrey;
     box-shadow: 0rem 0rem 5px 3px white;
     padding-bottom: 4px;
-    margin-bottom: 30px;
-    margin-left: 5px;
+    margin-bottom: 100px;
+    margin-left: 30px;
 }
 
 .skill-name{
-    font-size: 20px;
+    font-size: 26px;
     margin-left: 15px;
-   color: aliceblue;
+   color: rgb(10, 8, 8);
     vertical-align: middle;
     
 }
@@ -208,16 +212,17 @@ section{
 
 #contact{
     background: linear-gradient(to top left, rgb(115, 115, 235),rgb(235, 120, 206));
-    
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
-    height: 65%;
+    height: 60vh;
     
 }
 .con-heading{
     width: auto;
     padding: 20px 10px 10px;
     margin: 10px auto;
-    font-weight: 300;
+    font-weight: 100;
 }
 
 .con-heading span{
@@ -225,7 +230,7 @@ section{
     color:white;
     display: inline-block;
     padding-top: 10px;
-    margin-right: 0.5 rem;
+    margin-right: 5px;
 }
 
 #con-forms{
@@ -245,8 +250,8 @@ section{
 
 .address{
     color:azure;
-    font-size: 12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     margin-left: 20px;
 }
 
@@ -275,10 +280,19 @@ section{
     margin-top: 40px;
     margin-left: 50px;
     height: 30px;
-    width: 9rem;
+    width: 11rem;
     border: 2px solid white;
     
     
+}
+#socio{
+    height: 90px;
+}
+@media only screen and (max-width:500px)
+{
+    .con-forms{
+        flex-direction: column;
+    }
 }
 
 /* ---------------------------------------Experience & Education  section------------------------------ */
@@ -290,6 +304,10 @@ section{
     width: 75%;
     
 }
+
+.expbox{
+    margin-left: 0%;
+}
 .timeline-box{
     position: relative;
     margin: 5px;
@@ -298,25 +316,13 @@ section{
     min-height: 150px;
     padding: 0px;
 }
-
-.timeline-box:nth-child(2n){
-    left: 53%;
+.expsub{
+    margin-left: 58%;
 }
-@media screen and (max-width:600px)
-{  
-     .timeline-box:nth-child(2n+1){
-    left:53%;
-}
-   .timeline-divider{
-    width: 0;
-    height: 68%;
-    border:1px dashed lightslategray;
-    position:absolute;
-    top:10%;
-    
+.expsub:nth-child(2n+1){
+    margin-left: 8%;
 }
 
-}
 
 .timeline-box-title{
     font-size: 10px;
@@ -352,23 +358,43 @@ section{
 
 .timeline-divider{
     width: 0;
-    height: 68%;
+    height: 75%;
     border:1px dashed lightslategray;
     position:absolute;
-    top:10%;
-    left:50%;
+    top:1%;
+    margin-left:50%;
+    margin-top: -2%;
+    margin-bottom: -2%;
 }
 
 .timeline-traveller{
     top:1%;
     transform: rotate(90deg); 
-    position: sticky;  
+    position: sticky; 
+    font-size: 35px; 
+}
+
+@media only screen and (max-width:500px)
+{   .timeline{
+    width: 90%;
+    } 
+    .expsub{
+    margin-left: 1%;
+    }
+    .expsub:nth-child(2n+1){
+        margin-left: 1%;
+    }
+    .timeline-divider{
+       display: none;
+        
+    }
 }
 
 /* ------------------------------------Projects--------------------------------------------------- */
 
 #portfolio{
-    margin-bottom: 150px;
+    margin-bottom: 50px;
+   
 }
 .projects-container{
     width:80%;
@@ -393,4 +419,62 @@ section{
     height:300 px ;
     border-radius: 40%;
     align-content: space-around;
+}
+/* --------------------------------------New Contact----------------------------------------------------------- */
+
+#endsec{
+    background: linear-gradient(to top left, rgb(115, 115, 235),rgb(235, 120, 206));
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+.address{
+    color:azure;
+    font-size: 2px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin-left: 20px;
+}
+
+
+
+
+#forms1 div form input{
+    width:20rem;
+    height:25px;
+    border-style: hidden;
+    border-bottom: 3px solid white;
+    background-color: transparent;
+    margin-bottom: 40px;
+    text-align: center;
+    
+}
+
+#forms1 div form textarea{
+    width:20rem;
+    height:25px;
+    border-style: hidden;
+    border-bottom: 3px solid white;
+    background-color: transparent;
+    text-align: center;
+}
+
+#forms1 div form button{
+    background-color: transparent;
+    margin-top: 40px;
+    margin-left: 50px;
+    height: 30px;
+    width: 11rem;
+    border: 2px solid white;
+    
+}
+
+@media only screen and (max-width:500px)
+{  
+    #doggy{
+        display: none;
+    }
 }
