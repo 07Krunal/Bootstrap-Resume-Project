@@ -27,8 +27,9 @@ body {
     height: 65vh;
     opacity: 1;
     /* background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg) ; */
-    background-color: #FF9A8B;
-    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    background-color: #07ebed;
+background-image: linear-gradient(107deg, #07ebed 9%, #d62acc 46%, #e3e50e 89%);
+
     
 
     background-size: cover;
